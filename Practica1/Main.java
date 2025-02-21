@@ -6,12 +6,14 @@ public class Main {
         System.out.println("- CALCULADORA -");
         System.out.println("---------------");
     }
+
     public static void imprimirOpciones(){
         System.out.println("La opcion 1 suma dos numeros dados por el usuario.");
         System.out.println("La opcion 2 multiplica dos numeros dados por el usuario.");
         System.out.println("La opcion 3 divide dos numeros dados por el usuario.");
         System.out.println("La opcion 4 repite una oracion dada por el usuario");
     }
+    
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
