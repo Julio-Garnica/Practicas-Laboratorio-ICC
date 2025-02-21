@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void imprimirCalculadora(){
-        System.out.println("-----------------");
-        System.out.println("-- CALCULADORA --");
-        System.out.println("-----------------");
+        System.out.println("---------------");
+        System.out.println("- CALCULADORA -");
+        System.out.println("---------------");
     }
 
     public static void imprimirOpciones(){
