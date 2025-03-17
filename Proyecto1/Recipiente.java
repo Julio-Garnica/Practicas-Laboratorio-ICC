@@ -1,4 +1,4 @@
-public class Recipientes implements ServiciosRecipiente{
+public class Recipiente implements ServiciosRecipiente{
     private double radio;
     private double altura;
     private double cantidadLiquido;
@@ -8,7 +8,7 @@ public class Recipientes implements ServiciosRecipiente{
     private double cantidadTemp;
     private static final double PI = 3.1416;
 
-    public Recipientes(double radio, double altura, double cantidadLiquido) {
+    public Recipiente(double radio, double altura, double cantidadLiquido) {
         this.radio = radio;
         this.altura = altura;
         this.cantidadLiquido = cantidadLiquido;
@@ -51,7 +51,7 @@ public class Recipientes implements ServiciosRecipiente{
         return liquidoAnterior;
     }
 
-    public void vierte(Recipientes otro) {
+    public void vierte(Recipiente otro) {
         double espacioLibre = otro.capacidad() - otro.cantidadLiquido;
         double cantidadAVertir = cantidadLiquido;
         cantidadAVertir = (cantidadAVertir > espacioLibre) ? espacioLibre : cantidadAVertir;
@@ -59,26 +59,26 @@ public class Recipientes implements ServiciosRecipiente{
         otro.cantidadLiquido += cantidadAVertir;
     }
 
-    public boolean mismasDimensiones (Recipientes otro) {
+    public boolean mismasDimensiones (Recipiente otro) {
        boolean dimensiones = (radio == otro.radio && altura == otro.altura);
         return dimensiones;
     }
 
-    public boolean mismaCapacidad (Recipientes otro) {
+    public boolean mismaCapacidad (Recipiente otro) {
         return capacidad() == otro.capacidad();
     }
 
-    public boolean contieneMas (Recipientes otro){
+    public boolean contieneMas (Recipiente otro){
         return cantidadLiquido > otro.cantidadLiquido;
     }
 
-    public boolean cabeMas (Recipientes otro){
+    public boolean cabeMas (Recipiente otro){
         return capacidadRestante() > otro.capacidadRestante();
     }
 
-    public Recipientes creaContenedorJusto (){
+    public Recipiente creaContenedorJusto (){
         double nuevaAltura = altura * (cantidadLiquido/capacidad());
-        return new Recipientes (radio, nuevaAltura, 0);
+        return new Recipiente (radio, nuevaAltura, 0);
     }
 
     public String muestra (){
@@ -114,8 +114,8 @@ public class Recipientes implements ServiciosRecipiente{
     }
 
     public static void main(String[] args) {
-        Recipientes cilindro1 = new Recipientes(9, 20, 3100.20);
-        Recipientes cilindro2 = new Recipientes(5, 10, 505.5);
+        Recipiente cilindro1 = new Recipiente(9, 20, 3100.20);
+        Recipiente cilindro2 = new Recipiente(5, 10, 505.5);
 
         imprimirEncabezado();
         System.out.println("Capacidad total: " + cilindro1.capacidad() + " cm3");
@@ -131,7 +131,7 @@ public class Recipientes implements ServiciosRecipiente{
         System.out.println("Tienen la misma capacidad el cilindro 1 y el cilindro 2?" + cilindro1.mismaCapacidad(cilindro2));
         System.out.println("El cilindro 1, tiene mayor cantidad de liquido que el cilindro2?" + cilindro1.contieneMas(cilindro2));
         System.out.println("El cilindro 1, tiene mayor capacidad restante que el cilindro 2?" + cilindro1.cabeMas(cilindro2));
-        Recipientes cilindroJusto = cilindro1.creaContenedorJusto();
+        Recipiente cilindroJusto = cilindro1.creaContenedorJusto();
         System.out.println("El radio, la altura y el liquido vertido en el nuevo cilindro son los siguientes respectivamente: " + cilindroJusto.getRadio() + "cm, " + cilindroJusto.getAltura() + "cm, " +  cilindroJusto.getCantidadLiquido() + "cm3.");
         System.out.println(cilindro1.muestra());
     }

@@ -5,11 +5,11 @@ public interface ServiciosRecipiente{
     public boolean estaLleno ();
     public double rellena (double cantidad);
     public double vacia ();
-    public void vierte (Recipientes otro);
-    public boolean mismasDimensiones (Recipientes otro);
-    public boolean mismaCapacidad (Recipientes otro);
-    public boolean contieneMas (Recipientes otro);
-    public boolean cabeMas (Recipientes otro);
-    public Recipientes creaContenedorJusto ();
+    public void vierte (Recipiente otro);
+    public boolean mismasDimensiones (Recipiente otro);
+    public boolean mismaCapacidad (Recipiente otro);
+    public boolean contieneMas (Recipiente otro);
+    public boolean cabeMas (Recipiente otro);
+    public Recipiente creaContenedorJusto ();
     public String  muestra ();
 }
