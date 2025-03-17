@@ -21,7 +21,7 @@ public class Main{
                     reloj.avanzarSegundo();
                     System.out.println(reloj.muestra());
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -34,7 +34,7 @@ public class Main{
                     System.out.println(reloj.muestra());
                     contador++;
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -47,7 +47,7 @@ public class Main{
                     System.out.println(reloj.muestra());
                     contador++;
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
