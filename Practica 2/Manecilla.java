@@ -1,9 +1,9 @@
-public class Manecillas {
+public class Manecilla {
     private int manecillaHoras;
     private int manecillaMinutos;
     private int manecillaSegundos;
 
-    public Manecillas (int manecillaHoras, int manecillaMinutos, int manecillaSegundos){
+    public Manecilla (int manecillaHoras, int manecillaMinutos, int manecillaSegundos){
         this.manecillaHoras = manecillaHoras;
         this.manecillaMinutos = manecillaMinutos;
         this.manecillaSegundos = manecillaSegundos;
