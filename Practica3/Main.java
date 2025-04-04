@@ -1,6 +1,9 @@
 public class Main{
     
     public static void main(String[] args){
+        System.err.println("--------------------");
+        System.err.println("---Listas Ligadas---");
+        System.err.println("--------------------");
         ListaLigada lista = new ListaLigada();
         System.out.println(lista.toString());
         lista.insertarFinal(1);
